@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class='container'>
+    <button onclick="clearTable()">Clear</button>
+    <div class='table'>
+
+    </div>
+    <script>
+        let table = document.querySelector('.table');
+        let size = 16; createGrid(size);
+        function createGrid(size) {
+            for (let i = 0; i < size; i++) {
+                let row = document.createElement('div');
+                row.classList.add('row');
+                for (let j = (i * size) + 1; j < (i * size) + size + 1; j++) {
+                    let cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    cell.id = j;
+                    cell.style.width=500/size +'px';
+                    cell.style.height=500/size +'px';
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+            const selectedDiv = document.querySelectorAll('.cell');
+            selectedDiv.forEach(div => div.addEventListener('mouseover', () => { div.style.backgroundColor = getRandomColor(); }));
+        }
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function clearTable() {
+            let newGrid = prompt('How much square do you want for each row', '16');
+            table = document.querySelector('.table');
+            table.innerHTML = '';
+            createGrid(+newGrid);
+        }
+    </script>
+</body>
+
+</html>

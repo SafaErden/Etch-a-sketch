@@ -1,0 +1,46 @@
+.container {
+    text-align: center;
+}
+button{
+    width:250px;
+    height: 75px;
+    margin: 20px;
+    background-color: rgb(114, 155, 18);
+    color:white;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 0px;
+    outline: none;
+}
+button:hover{
+    
+    background-color:white;
+    color: rgb(114, 155, 18);
+    border: 2px solid rgb(114, 155, 18);
+}
+.table {
+    margin:  auto;
+    width:500px;
+    height:500px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ababab;
+}
+
+.randombg {
+    background-color: firebrick;
+}
+
+#id1 {
+    background-color: firebrick;
+}
