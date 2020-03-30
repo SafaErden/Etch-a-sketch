@@ -51,5 +51,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 Acknowledgments
 
-- If you are applying issues please just use HTML & CSS
-- Please keep in mind that this project is just a not fully functional Layout for Mint.com’s signup page
+- If you are applying issues please just use HTML & CSS & JS
